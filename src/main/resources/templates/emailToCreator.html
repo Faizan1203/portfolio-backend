@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+<div style="background-color: #ffffff; margin: auto; padding: 40px; border: 1px solid #ddd; border-radius: 5px; max-width: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <h1 style="color: #444; margin-bottom: 20px;">Hi Faizan,</h1>
+    <p style="line-height: 1.5; color: #666; margin-bottom: 20px;">You have received the following email from <strong th:text="${firstName}"></strong> with the subject: <strong th:text="${subject}"></strong></p>
+    <p style="line-height: 1.5; color: #666; margin-bottom: 20px;" th:text="${message}"></p>
+    <p style="line-height: 1.5; color: #666; margin-bottom: 20px;">You can reach out to them at the following email: <a href="mailto:" th:href="'mailto:' + ${email}" th:text="${email}" style="color: #3498db; text-decoration: none;"></a></p>
+    <p style="margin-top: 30px; color: #888; font-size: 14px;">Thanks,<br>Your Portfolio Website</p>
+</div>
+</body>
+</html>

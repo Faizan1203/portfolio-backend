@@ -1,0 +1,22 @@
+# define the services/containers to be run
+services:
+  # define the application container/service
+  # we can use any name for the service. Here it is `web`
+  # we can create multiple services as well
+  portfolio-backend:
+    # specify the image to build the container from
+    # this can be any image available in docker hub or a custom one or the one we want to build
+    build:
+      # specify the path to the Dockerfile
+      context: .
+      # specify the file name (optional)
+      dockerfile: Dockerfile
+    # specify the environment variables
+    environment:
+      SPRING_MAIL_USERNAME: <your-email>
+      SPRING_MAIL_PASSWORD: <your-email-password>
+    # specify the port mapping from host to the container
+    # this is similar to the -p flag in `docker run` command
+    # first port is the port on host machine and the second is the port inside the container
+    ports:
+      - 8080:8080

@@ -1,5 +1,5 @@
 
-## Spring Boot Email API (README.md)
+## Spring Boot Email API
 
 **This is a Spring Boot application that provides an API for sending emails with dynamic content.**
 
@@ -58,6 +58,52 @@ git clone https://github.com/Faizan1203/portfolio-backend.git
 
 ```
 
+## Running the Application with Docker Compose (Optional)
+
+**Prerequisites:**
+
+-   **Docker:**  [https://www.docker.com/](https://www.docker.com/)
+-   **Docker Compose:**  [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
+**1. Update `docker-compose.yml`:**
+
+In the `docker-compose.yml` file, locate the `portfolio-backend` service and add the following environment variables:
+
+YAML
+
+```
+environment:
+  SPRING_MAIL_USERNAME: <your-email>
+  SPRING_MAIL_PASSWORD: <your-email-password>
+
+```
+
+
+Replace `<your-email>` and `<your-email-password>` with your actual credentials.
+
+**2. Run the Application:**
+
+Open your terminal and navigate to the directory containing the `docker-compose.yml` file. Then, run the following command:
+
+Bash
+
+```
+docker-compose up -d
+
+```
+
+
+This builds the container image and starts the service in the background.
+
+**3. Access the Application:**
+
+Once the container is running, you can hit the API using the example request from the usage section below.
+
+**Note:**
+
+-   Store sensitive information like passwords securely.
+
+For more details, refer to the official Docker Compose documentation: [https://docs.docker.com/compose/](https://docs.docker.com/compose/).
 
 **### Usage**
 
@@ -80,7 +126,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"firstName": "John", "last
 
 ```
 
-content_copy
+
 
 **Response**
 

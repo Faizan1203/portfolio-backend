@@ -105,7 +105,7 @@ Once the container is running, you can hit the API using the example request fro
 
 For more details, refer to the official Docker Compose documentation: [https://docs.docker.com/compose/](https://docs.docker.com/compose/).
 
-**### Usage**
+### Usage
 
 **Sending a Contact Form Submission**
 
